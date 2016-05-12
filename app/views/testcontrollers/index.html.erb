@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Testcontrollers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>A</th>
+      <th>B</th>
+      <th>C</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @testcontrollers.each do |testcontroller| %>
+      <tr>
+        <td><%= testcontroller.a %></td>
+        <td><%= testcontroller.b %></td>
+        <td><%= testcontroller.c %></td>
+        <td><%= link_to 'Show', testcontroller %></td>
+        <td><%= link_to 'Edit', edit_testcontroller_path(testcontroller) %></td>
+        <td><%= link_to 'Destroy', testcontroller, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Testcontroller', new_testcontroller_path %>
